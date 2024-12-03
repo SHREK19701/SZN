@@ -186,14 +186,17 @@
                 <input type="number" id="tokenAmount" placeholder="500 - 10000" required oninput="updatePrice()">
 
                 <div id="priceDisplay">Cena: 0 Kč</div>
-                
+                <stripe-buy-button
+  buy-button-id="buy_btn_1QK1K0AsqZIp6zSL02BzbaZ9"
+  publishable-key="pk_live_51QG24xAsqZIp6zSLLG8bHQ0JBZKhG0pIs14OfPA52oLYPmTh6ZftIlwgDbuwHM87RaV7XiqWGGmA1rin3z0mhDlf00SSA8UOsv">
+
+</stripe-buy-button>
                 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" id="paypalForm">
                     <input type="hidden" name="cmd" value="_s-xclick" />
                     <input type="hidden" name="hosted_button_id" value="QT7K3XC3DC6AL" />
                     <input type="hidden" name="currency_code" value="CZK" />
                     <input type="hidden" name="item_name" value="Žetony" />
                     <input type="hidden" name="amount" id="tokenPrice" value="" />
-                    <button type="button" onclick="buyTokens()">Koupit</button>
                 </form>
             </section>
         </div>
