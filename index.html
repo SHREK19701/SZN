@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sexy Dates</title>
     <link rel="stylesheet" href="public/css/style.css">
-    
+    <script id="pixel-chaty" async="true" src="https://cdn.chaty.app/pixel.js?id=45S7b1EI"></script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -156,9 +156,27 @@
                 <div id="message-container" class="message-container"></div>
                 <textarea id="message" rows="4" placeholder="Napište zprávu"></textarea>
                 <button onclick="sendMessage()">Odeslat</button>
-                <button class="emoji-button" onclick="addEmoji('😊')">😊</button>
-                <button class="emoji-button" onclick="addEmoji('😍')">😍</button>
-                <button class="emoji-button" onclick="addEmoji('😢')">😢</button>
+                  <button class="emoji-button" onclick="addEmoji('😊')">😊</button>
+                    <button class="emoji-button" onclick="addEmoji('😍')">😍</button>
+                    <button class="emoji-button" onclick="addEmoji('😢')">😢</button>
+                    <button class="emoji-button" onclick="addEmoji('❤️')">❤️</button>
+                    <button class="emoji-button" onclick="addEmoji('💕')">💕</button>
+                    <button class="emoji-button" onclick="addEmoji('😂')">😂</button>
+                    <button class="emoji-button" onclick="addEmoji('😘')">😘</button>
+                    <button class="emoji-button" onclick="addEmoji('👍')">👍</button>
+                    <button class="emoji-button" onclick="addEmoji('🎉')">🎉</button>
+                    <button class="emoji-button" onclick="addEmoji('💔')">💔</button>
+                    <button class="emoji-button" onclick="addEmoji('🔥')">🔥</button>
+                    <button class="emoji-button" onclick="addEmoji('😎')">😎</button>
+                    <button class="emoji-button" onclick="addEmoji('🥳')">🥳</button>
+                    <button class="emoji-button" onclick="addEmoji('😜')">😜</button>
+                    <button class="emoji-button" onclick="addEmoji('🤔')">🤔</button>
+                    <button class="emoji-button" onclick="addEmoji('😇')">😇</button>
+                    <button class="emoji-button" onclick="addEmoji('😭')">😭</button>
+                    <button class="emoji-button" onclick="addEmoji('😡')">😡</button>
+                    <button class="emoji-button" onclick="addEmoji('🤗')">🤗</button>
+                    <button class="emoji-button" onclick="addEmoji('😴')">😴</button>
+               
                 <div>Žetony: <span id="token-count">0</span></div>
             </section>
             <section id="buyTokens" class="hidden">
@@ -229,8 +247,8 @@
 
             if (message === '') return; // Neodesílat prázdné zprávy
 
-            if (tokenCount >= 30) { // Zpráva stojí 50 žetonů
-                tokenCount -= 30; // Odečíst žetony
+            if (tokenCount >= 40) { // Zpráva stojí 50 žetonů
+                tokenCount -= 40; // Odečíst žetony
                 updateTokenDisplay();
 
                 const messageContainer = document.getElementById('message-container');
@@ -252,7 +270,7 @@
 
         function updatePrice() {
             const amount = document.getElementById('tokenAmount').value;
-            const price = amount * 0.30; // Předpokládáme cenu 0.30 Kč za žeton
+            const price = amount * 0.40; // Předpokládáme cenu 0.40 Kč za žeton
             document.getElementById('priceDisplay').innerText = `Cena: ${price.toFixed(2)} Kč`;
             document.getElementById('tokenPrice').value = price.toFixed(2); // Uložit cenu do hidden inputu
         }
